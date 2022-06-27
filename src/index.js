@@ -25,7 +25,7 @@ function inputHandler() {
                     countryList.innerHTML = markup;
                 } else if (data.length >= 2 && data.length <= 10) {
                     const markup = data.map(country => {
-                        return `<li><img src="${country.flags.svg}" width ="20" alt=""> ${country.name.official}</li>`});
+                        return `<li><img src="${country.flags.svg}" width ="20" alt=""><p>${country.name.official}</p></li>`}).join('');
                     countryList.innerHTML = markup;
                 } else {
                     Notiflix.Notify.info(
